@@ -1,0 +1,93 @@
+.banner{
+    margin: auto;
+    width: 1400px;
+    height: 400px;
+    position: relative;
+}
+.banner_img_dev{
+    position: absolute;
+    width: 1000px;
+    height: 400px;
+    object-fit: fill;
+    border-radius: 30px;
+    right: 130px;
+}
+.banner_img_perso{
+    position: absolute;
+    top: 80px;
+    left: 130px;
+    /* transform: translate(-50%, -50%); */
+    z-index: 2;
+    width: 300px;
+    height: 300px;
+    object-fit: fill;
+    border-radius: 100px;
+    box-shadow: 0px 2px 10px 2px rgba(0, 0, 0, 0.4);
+}
+/************************** ordinateur portable L max 1440px ************************/
+@media (max-width:1440px){
+    .banner{
+        width: 1000px;
+        height: 400px;
+        }
+    .banner_img_dev{
+        position: absolute;
+        width: 800px;
+        height: 400px;
+        right: 40px;
+    }
+    .banner_img_perso{
+        top: 80px;
+        left: 40px;
+        width: 250px;
+        height: 250px;
+    }
+    }
+/************************** ordinateur portable max 1024px ************************/
+@media (max-width:1024px){
+.banner{
+    width: 700px;
+    height: 400px;
+    }
+.banner_img_dev{
+    position: absolute;
+    width: 550px;
+    right: 30px;
+}
+.banner_img_perso{
+    top: 80px;
+    left: 20px;
+    width: 250px;
+    height: 250px;
+}
+}
+/************************** tablette max 768px ************************/
+@media (max-width:768px){
+.banner{
+    width: 400px;
+    height: 260px;
+}
+.banner_img_dev{
+    display:none;
+}
+.banner_img_perso{
+    position: initial;
+    width: 250px;
+    height: 250px;
+}
+}
+/************************** mobile max 425px ************************/
+@media (max-width:425px){
+.banner{
+    width: 300px;
+    height: 260px;
+}
+.banner_img_dev{
+display:none;
+}
+.banner_img_perso{
+position: initial;
+width: 250px;
+height: 250px;
+}
+}
