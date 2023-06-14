@@ -1,20 +1,28 @@
-/** style effets de défillement parallax **/
-//import parallax from 'react-scroll-parallax'
-
+import { useEffect } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import '../CSS/Main.css';
 import mongo from '../IMAGES/icone_mongodb.svg';
-//import Projet from '../COMPONENTS/ProjetsMasonry';
-// import code from '../IMAGES/icone_code.svg';
-// import nocode from '../IMAGES/icone_code_off.svg';
 import ContactForm from '../COMPONENTS/ContactForm';
 import Banner from '../COMPONENTS/Banner';
-// import presentation from '../IMAGES/icone_iframe.svg';
-// import code from '../IMAGES/icone_code_blocks.svg';
 import Collapses from '../COMPONENTS/Collapse';
 import Carousel from '../COMPONENTS/Carrousel';
+import { SlideLeft } from "../COMPONENTS/Effets";
+import { Slideright } from "../COMPONENTS/Effets";
 
 function Home (){
+
+    useEffect(()=>{
+        SlideLeft("#formation");
+    },[])
+    useEffect(()=>{
+        Slideright("#competence");
+    },[])
+    useEffect(()=>{
+        SlideLeft("#projet");
+    },[])
+    useEffect(()=>{
+        Slideright("#contact");
+    },[])
 
  function Presentation (){
 
@@ -22,12 +30,9 @@ function Home (){
         <section id='present'>
             <article className="present_article">
                 <div className='display_h1'>
-                    {/* <img src={code} alt='code' className='present_icone'/> */}
                     <h1 className="present_h1">Denis Thibaut Développeur Web Full Stack</h1>
-                    {/* <img src={nocode} alt='nocode' className='present_icone'/> */}
                 </div>
                 <Banner/>
-                {/* <h2 className="present_h2">Présentation</h2>  */}
                 <p className="present_p">
                     Je me Présente je suis Thibaut Développeur Full stack JavaScript, A FINIR
                 </p>
@@ -55,7 +60,6 @@ function Home (){
     return(
         <section id='competence'>
             <article>
-                {/* <img src={code} alt='logo_langage_programmation' className='icone'></img> */}
                 <h2 className="competence_h2">Compétences</h2>
                 <div className="competence_display">
                     <div className='competence_front'>
@@ -114,7 +118,7 @@ function Home (){
 
                     <div className='competence_outils'>
                         <h3>Outils</h3>
-                        <ul className="competence_p_outils">
+                        <ul className="competence_li_outils">
                             <li>
                                 <FontAwesomeIcon icon="fa-brands fa-figma" className='icone'/>
                                 <p>Figma</p>
@@ -130,7 +134,6 @@ function Home (){
                     </div>
                 </div>
                 <div className='collapse_display'>
-                    <h3>Savoir Faire</h3>
                     <ul>
                         <li>
                             <Collapses />
@@ -197,58 +200,3 @@ return  (
 };
 
 export default Home ;
-
-/*
-Mes Compétences en Front-End
-
-HTML - CSS : 
-
-intégration web avec html et css ,
-intégrer du contenu conformément à une maquette,
-implémenter une interface responsive,
-Voir sur le projet 2 du cursus
-
-gestion de projet et outils developpeurs :
-suivre le déroulement du projet grâce à un outil de gestion de projet (trello),
-rédiger les spécifications techniques d'un projet web à partir des besoins fonctionnels,
-découper une fonctionnalités en tâches pour préparer le développement,
-présenter la solution technique,
-mettre en place une méthode de veille technologique,
-versionner son projet avec git et github,
-installer un environnement de développement front-end
-
-optimisation et bug: 
-optimiser les performances d'un site web,
-débugger un site web grâce aux chrome devtools
-rédiger un cahier de recette pour tester un site
-Voir Projet 5
-
-
-JavaScript
-developpement web avec javascript :
-récupérer les donnés utilisateurs dans le javascript via des formulaires,
-manipuler les éléments du DOM avec JavScript
-gérer les événements utilisateurs avec JavaScript
-
-
-framework javascript : react
-
-configurer la navigation entre les pages de l'application avec react router,
-initialiser une application avec create react app,
-developper des éléments de l'interface d'un site web grâce à des composants react
-projet 6
-
-
-
-Mes Compétences en Back-End
-
-implémenter un modéle logique de données conformément à la réglementation
-mettre en oeuvre des opérations CRUD de maniére sécurisée
-stocker des données de maniére sécurisée
-projet 7
-
-pubication d'un site web
-déployer un site statique en ligne
-projet 8
-
-*/

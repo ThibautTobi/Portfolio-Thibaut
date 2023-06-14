@@ -1,17 +1,17 @@
 .container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    text-align: center;
 }
-.MuiButtonBase-root-MuiButton-root{
+/* .MuiButtonBase-root-MuiButton-root{
     color: white;
-}
-/* .MuiButtonBase-root {
-    color: white;
-    border: 4px solid white;
-    border-radius: 15px;
-    border-style: none dotted;
 } */
+.MuiButtonBase-root {
+    color: white;
+    /* border: 4px solid white;
+    border-radius: 15px;
+    border-style: none dotted; */
+}
 .MuiCollapse-root{
     margin: 10px 40px 10px 40px;
     padding: 10px;

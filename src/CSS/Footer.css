@@ -18,10 +18,10 @@ footer{
     justify-content: space-around;
 }
 .icone{
-    width: 70px;
-    height: 70px;
+    width: 90px;
+    height: 90px;
     color: white;
-    margin: 40px;
+    margin: 20px;
 }
 .enveloppe{
     display: flex;
@@ -30,3 +30,19 @@ footer{
 .footer_p{
     font-size: 20px;
 }
+/************************** ordinateur portable L max 1440px ************************/
+/* @media (max-width:1440px){
+
+} */
+/************************** ordinateur portable max 1024px ************************/
+/* @media (max-width:1024px){
+
+} */
+/************************** tablette max 768px ************************/
+/* @media (max-width:768px){
+
+} */
+/************************** mobile max 425px ************************/
+/* @media (max-width:425px){
+
+} */
