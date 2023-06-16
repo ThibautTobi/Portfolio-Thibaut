@@ -7,7 +7,8 @@ import Banner from '../COMPONENTS/Banner';
 import Collapses from '../COMPONENTS/Collapse';
 import Carousel from '../COMPONENTS/Carrousel';
 import { SlideLeft } from "../COMPONENTS/Effets";
-import { Slideright } from "../COMPONENTS/Effets";
+import enveloppe from "../IMAGES/icone_envelope.svg";
+//import ProgresBar from "../COMPONENTS/ProgressBar";
 
 function Home (){
 
@@ -15,17 +16,27 @@ function Home (){
         SlideLeft("#formation");
     },[])
     useEffect(()=>{
-        Slideright("#competence");
+        SlideLeft("#competence");
     },[])
     useEffect(()=>{
         SlideLeft("#projet");
     },[])
     useEffect(()=>{
-        Slideright("#contact");
+        SlideLeft("#contact");
     },[])
 
  function Presentation (){
 
+    const presentData = 
+                    `Je suis Denis Thibaut, un développeur web junior enthousiaste.
+                    J'aime les challenges et je suis passionné par la création de solutions numériques.
+                    Je suis compétent en HTML, CSS, JavaScript,
+                    React et Node.js, et j'ai une expérience pratique avec MongoDB.
+                    Je suis constamment à la recherche de nouvelles opportunités d'apprentissage et j'adore travailler en équipe.
+                    Je suis prêt à relever des défis et à repousser les limites pour créer des interfaces intuitives et esthétiques.
+                    Si vous recherchez un développeur web motivé, je serais ravi de contribuer à votre projet et de créer des produits numériques exceptionnels.
+                    Contactez-moi pour en discuter davantage.`
+    
     return (
         <section id='present'>
             <article className="present_article">
@@ -34,7 +45,7 @@ function Home (){
                 </div>
                 <Banner/>
                 <p className="present_p">
-                    Je me Présente je suis Thibaut Développeur Full stack JavaScript, A FINIR
+                    {presentData}
                 </p>
             </article>
         </section>
@@ -66,51 +77,37 @@ function Home (){
                         <h3>Font-End</h3> 
                         <ul className="competence_li_front">
                             <li>
-                                <FontAwesomeIcon icon="fa-brands fa-html5" className='icone'/>
+                                <FontAwesomeIcon icon="fa-brands fa-html5" style={{color: "#fcfcfc",}} className="icone"/>
                                 <p>HTML</p>
                             </li>
                             <li>
-                                <FontAwesomeIcon icon="fa-brands fa-css3-alt" className='icone'/>
+                                <FontAwesomeIcon icon="fa-brands fa-css3-alt" style={{color: "#ffffff",}} className="icone"/>
                                 <p>CSS</p>
                             </li>
                             <li>
-                                <FontAwesomeIcon icon="fa-brands fa-js" className='icone'/>
+                                <FontAwesomeIcon icon="fa-brands fa-square-js" style={{color: "#ffffff",}} className="icone"/>
                                 <p>JavaScript</p>
                             </li>
                             <li>
-                                <FontAwesomeIcon icon="fa-brands fa-react" className='icone'/>
+                                <FontAwesomeIcon icon="fa-brands fa-react" style={{color: "#ffffff",}} className="icone"/>
                                 <p>React</p>
                             </li>
-                            {/* <li>
-                                <FontAwesomeIcon icon="fa-brands fa-sass" className='icone'/>
-                                <p>Sass</p>
-                            </li> */}
-                            {/* <li>
-                                <FontAwesomeIcon icon="fa-brands fa-bootstrap" className='icone'/>
-                                <p>BootStrap</p>
-                            </li> */}
                         </ul>
                     </div>
                     <div className='competence_back'>
                         <h3>Back-End</h3>
                         <ul className="competence_p_back">
                             <li>
-                                <FontAwesomeIcon icon="fa-brands fa-node-js" className='icone'/>
+                                <FontAwesomeIcon icon="fa-brands fa-node-js" style={{color: "#ffffff",}} className="icone"/>
                                 <p>Node js</p>
                             </li>
-                            {/* <li>
-                                <FontAwesomeIcon icon="fa-brands fa-js" className='icone'/>
-                                <p>JavaScript</p>
-                            </li> */}
                         </ul>
                     </div>
                     <div className='competence_base'>
                         <h3>Base de donnés</h3>
                         <ul>
                             <li>
-                                {/* <img width="48" height="48" className='competence_icone + white'src="https://img.icons8.com/external-tal-revivo-shadow-tal-revivo/48/external-mongodb-a-cross-platform-document-oriented-database-program-logo-shadow-tal-revivo.png" alt="external-mongodb-a-cross-platform-document-oriented-database-program-logo-shadow-tal-revivo"/>    */}
                                 <img src={mongo} alt='MongoDb' className='icone'></img>
-                                {/* <FontAwesomeIcon icon="fa-brands fa-mdb" className='icone'/> */}
                                 <p>MongoDb</p>
                             </li>
                         </ul>
@@ -120,16 +117,13 @@ function Home (){
                         <h3>Outils</h3>
                         <ul className="competence_li_outils">
                             <li>
-                                <FontAwesomeIcon icon="fa-brands fa-figma" className='icone'/>
+                                <FontAwesomeIcon icon="fa-brands fa-figma" style={{color: "#ffffff",}} className="icone"/>
                                 <p>Figma</p>
                             </li>
                             <li>
-                                <FontAwesomeIcon icon="fa-brands fa-trello" className='icone'/>
+                                <FontAwesomeIcon icon="fa-brands fa-trello" style={{color: "#fcfcfc",}} className="icone" />
                                 <p>Trello</p>
                             </li>
-                            {/* <li> en cours
-                                <FontAwesomeIcon icon="fa-brands fa-sass" className='icone'/>
-                            </li> */}
                         </ul>
                     </div>
                 </div>
@@ -151,22 +145,22 @@ function Projets (){
         <section id='projet'>
             <article className="competence_article">
             <h2 className="projet_h2">Projets</h2>
-            {/* <Projet/> */}
             <Carousel/>
             </article>
         </section>
     )
 }
 
-// function Experience (){
+// function Experiences (){
 
 //     return(
 //         <section id='experience'>
 //             <article className="competence_article">
 //                 <h2 className="experience_h2">Expériences</h2> 
 //                 <p className="competence_p">
-                    
+//                     En augmentation jours aprés jours
 //                 </p>
+//                 <ProgresBar/>
 //             </article>
 //         </section>
 //     )
@@ -177,10 +171,10 @@ function Contacts (){
     return(
         <section id='contact'>
             <article className="competence_article">
+            <h2 className="contacts_h2">Contacts</h2>
                 <div className='enveloppe'>
-                    <FontAwesomeIcon icon="fa-solid fa-envelope" className='icone'/>
+                    <img src={enveloppe} alt="enveloppe" className="icone"></img>
                 </div>
-                <h2 className="contacts_h2">Contacts</h2> 
                 <ContactForm/>
             </article>
         </section>
@@ -193,7 +187,7 @@ return  (
     <Formation />
     <Compétences />
     <Projets />
-    {/* <Experience /> */}
+    {/* <Experiences /> */}
     <Contacts />
 </div>
 )

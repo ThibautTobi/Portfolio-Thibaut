@@ -2,20 +2,20 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     position:fixed;
     width: 100%;
-    height: 60px;
-    background-color: #C2B280;
-    color: white;
+    height: 150px;
     z-index: 3;
     border-bottom: solid 5px white;
+    background-color: #C2B280;
 }
 .navbar_links{
     display: flex;
 }
 .navbar_link{
-    padding: 0 1px;
+    padding: 5px;
+    margin: 20px;
     color:inherit;
 }
 .navbar_burger{
@@ -24,9 +24,13 @@
     background-color: transparent;
     border: none;
     color: inherit;
+    display: none;
 }
 /***************************  version tablette et mobile moins de 767px **********************************/
 @media screen and (max-width:767px){
+    .navbar{
+        height: 75px;
+    }
     .navbar_links{
         flex-direction: column;
         justify-content: center;

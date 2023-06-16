@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Collapse from '@mui/material/Collapse';
-import Button from '@mui/material/Button';
+// import Button from '@mui/material/Button';
 import '../CSS/Collapse.css';
 
 function MultipleCollapses() {
@@ -47,11 +47,7 @@ function MultipleCollapses() {
       mettre en oeuvre des opérations CRUD de maniére sécurisée,
       stocker des données de maniére sécurisée,
       projet 7`,
-      isOpen: false },
-    // { id: 3,
-    //   title: 'Autre',
-    //   content: ``,
-    //   isOpen: false },
+      isOpen: false }
   ]);
 
   const handleToggleCollapse = (id) => {
@@ -69,9 +65,9 @@ function MultipleCollapses() {
     <div className='container'>
       {collapseData.map((item) => (
         <div key={item.id}>
-          <Button onClick={() => handleToggleCollapse(item.id)}>
+          <button className='button_color' onClick={() => handleToggleCollapse(item.id)}>
             {item.title}
-          </Button>
+          </button>
           <Collapse in={item.isOpen}>
             <div>{item.content}</div>
           </Collapse>

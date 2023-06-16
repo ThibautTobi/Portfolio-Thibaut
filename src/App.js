@@ -5,6 +5,10 @@ import Footer from './COMPONENTS/Foot';
 import Home from './PAGES/Main';
 import Erreur from './PAGES/Erreur';
 import './CSS/App.css';
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faHtml5,faGithub,faLinkedin,faFigma,faTrello,faNodeJs,faReact,faSquareJs,faCss3Alt } from '@fortawesome/free-brands-svg-icons';
+
+library.add(faHtml5,faCss3Alt,faSquareJs,faReact,faNodeJs,faFigma,faTrello,faGithub,faLinkedin )
 
 function App() {
 

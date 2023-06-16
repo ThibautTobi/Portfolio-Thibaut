@@ -1,18 +1,28 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import SwiperCore, { Navigation, Pagination, Autoplay } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper-bundle.css';
-// import 'swiper/components/navigation/navigation.css';
-// import 'swiper/components/pagination/pagination.css';
 import { Modal, Backdrop, Fade } from '@mui/material';
 import data from '../DATA/Data';
 import '../CSS/Carrousel.css';
+import { getProjects } from '../connection/Api';
 
 SwiperCore.use([Navigation, Pagination, Autoplay]);
 
 function Carousel() {
+  const [projects, setProjects] = useState([]);
   const [selectedItem, setSelectedItem] = useState(null);
 
+
+  useEffect(() => {
+    const fetchProjects = async () => {
+      const projectsData = await getProjects();
+      setProjects(projectsData);
+    };
+  
+    fetchProjects();
+  }, []);
+  
   const handleOpenModal = (item) => {
     setSelectedItem(item);
   };
@@ -31,7 +41,7 @@ function Carousel() {
         loop
         autoplay={{ delay: 6000 }}
       >
-        {data.map((item) => (
+        {data.map((item) => ( /* a remplacer data par projects pour recevoir du back end */
           <SwiperSlide key={item.id}>
             <div className="carousel_item" onClick={() => handleOpenModal(item)}>
               <div className="carousel_item_overlay" />

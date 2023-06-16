@@ -1,8 +1,19 @@
 .swiper{
-  margin: 0px 100px 20px 100px;
+  margin: 25px 100px 25px 100px;
 }
 .swiper-button-prev,.swiper-button-next{
   color: white;
+}
+.swiper-button-prev{
+  left: 300px;
+  right: auto;
+}
+.swiper-button-next{
+  right: 300px;
+  left: auto;
+}
+.swiper-pagination{
+  margin-top: 20px;
 }
 :root {
   --swiper-theme-color: #ffffff;
@@ -20,7 +31,6 @@
     padding: 20px;
     margin: auto;
     position: relative;
-
 }
 .carousel_item_img{
     align-items: center;
@@ -29,10 +39,6 @@
     height: 500px;
     background-color: grey;
     object-fit: fill;
-    /*
-      width: 100%;
-  height: auto;
-  */
 }
 .carousel_item_overlay {
   position: absolute;
@@ -132,6 +138,9 @@
 @media (max-width:425px){
   .swiper{
     margin: 0px 10px 50px 10px;
+  }
+  .swiper-slide{
+    margin-right: 0px;
   }
   .carousel_item{
     width:240px;

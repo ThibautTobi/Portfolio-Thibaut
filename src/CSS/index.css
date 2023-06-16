@@ -4,6 +4,7 @@
   box-sizing: border-box;
   font-size: 40px;
   font-family: 'Ubuntu', sans-serif, Courier, monospace;
+  color: white;
 }
 html,body,#root {
   width: 100%;
@@ -12,19 +13,21 @@ html,body,#root {
   padding: 0px;
 }
 h1{
-  font-size: 45px;
+  font-size: 70px;
   font-family: 'Caveat', cursive, sans-serif, Courier, monospace;
   font-weight: 700;
 }
 h2{
-  font-size: 40px;
+  font-size: 70px;
   font-family: 'Caveat', cursive, sans-serif, Courier, monospace;
   font-weight: 600;
+  margin: 20px 0px 20px 0px;
 }
 h3{
-  font-size: 35px;
+  font-size: 45px;
   font-family: 'Caveat', cursive, sans-serif, Courier, monospace;
   font-weight: 500;
+  margin: 20px;
 }
 li{
   list-style: none;
@@ -36,7 +39,7 @@ ul{
   text-align: center;
 }
 a{
-  font-family: 'Caveat', cursive, sans-serif, Courier, monospace;
+  font-family: 'Ubuntu', cursive, sans-serif, Courier, monospace;
   font-weight: 700;
   text-decoration: none;
   color: white;
@@ -51,12 +54,17 @@ a{
   }
 /************************** ordinateur portable L max 1440px ************************/
 @media (max-width:1440px){
-
+  a{
+    font-size: 25px;
+  }
   }
 /************************** ordinateur portable max 1024px ************************/
 @media (max-width:1024px){
   *{
     font-size: 25px;
+  }
+  h1{
+    font-size: 50px;
   }
   a{
     font-size: 20px;

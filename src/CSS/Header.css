@@ -1,17 +1,8 @@
 header{
-    background: #C2B280; 
+    background-color: #C2B280; 
     width: 100%;
-    height: auto;
-    /* display: flex;
-    flex-direction: column; */
+    height: 150px;
 }
-/* .banner_nav{
-  margin:auto;
-  height: 60px;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-} */
 .mode_button{
   background-color:#C2B280;
   border: none;
@@ -19,15 +10,7 @@ header{
 .mode_button_img{
 width: 40px;
 height: 40px;
-}
-/*****************************    *************************************/
-@media (max-width: 768px) {
-header{
-  height: 60px;
-}
-.mode_button{
-  background-color:rgb(172, 172, 172);
-}
+background-color:#C2B280;
 }
 /************************** ordinateur portable L max 1440px ************************/
 @media (max-width:1440px){
@@ -39,7 +22,12 @@ header{
 }
 /************************** tablette max 768px ************************/
 @media (max-width:768px){
-
+  header{
+    height: 75px;
+  }
+  .mode_button,.mode_button_img{
+    background-color:rgb(172, 172, 172);
+  }
 }
 /************************** mobile max 425px ************************/
 @media (max-width:425px){

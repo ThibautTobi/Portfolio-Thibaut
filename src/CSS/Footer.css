@@ -1,6 +1,6 @@
 footer{
     color: white;
-    background: #C2B280;/*linear-gradient(to top, #C2B280, white);*/
+    background: #C2B280;
     width: 100%;
     height: auto;
     position:absolute;
@@ -22,10 +22,6 @@ footer{
     height: 90px;
     color: white;
     margin: 20px;
-}
-.enveloppe{
-    display: flex;
-    justify-content: center;
 }
 .footer_p{
     font-size: 20px;

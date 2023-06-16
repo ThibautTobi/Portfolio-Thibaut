@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import '../CSS/ContactForm.css';
-const ContactForm = () => {
+import { postFormulaire } from '../connection/Api';
+
+function ContactForm () {
+
   const [formData, setFormData] = useState({
     name: '',
     prenom:'',
@@ -14,10 +17,26 @@ const ContactForm = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Par exemple, vous pouvez utiliser une API ou une fonction pour envoyer les données à un serveur
-    console.log(formData);
+  
+    try {
+      const response = await postFormulaire(formData);
+      
+      console.log('Formulaire soumis avec succès');
+      console.log(response);
+
+      // affichage d'une alerte de succès
+      alert('Le formulaire a été soumis avec succès');
+    } catch (error) {
+
+      console.error('Erreur lors de la soumission du formulaire');
+      console.error(error);
+
+      //affichage d'une alerte
+      alert(`Une erreur s'est produite lors de la soumission du formulaire.`);
+    }
+
     // Réinitialisez le formulaire après l'envoi
     setFormData({ name: '', prenom:'', email: '', message: '' });
   };
@@ -33,6 +52,7 @@ const ContactForm = () => {
           value={name}
           onChange={handleChange}
           required
+          maxLength={20}
         />
       </div>
       <div className='formulaire_display'>
@@ -44,6 +64,7 @@ const ContactForm = () => {
           value={prenom}
           onChange={handleChange}
           required
+          maxLength={20}
         />
       </div>
       <div className='formulaire_display'>
@@ -55,6 +76,7 @@ const ContactForm = () => {
           value={email}
           onChange={handleChange}
           required
+          maxLength={40}
         />
       </div>
       <div className='formulaire_display'>
@@ -65,6 +87,7 @@ const ContactForm = () => {
           value={message}
           onChange={handleChange}
           required
+          maxLength={400}
         ></textarea>
       </div>
       <button type="submit" className='submit'>Envoyer</button>

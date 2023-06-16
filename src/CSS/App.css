@@ -3,9 +3,10 @@
 }
 .light-theme {
   background-color: white;
-  color: white;
 }
 .dark-theme {
   background-color: grey;
-  color: grey;
+  .name-input{
+    background-color: grey;
+  }
 }

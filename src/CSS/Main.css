@@ -9,10 +9,7 @@
     color:white;
 }
 .present_h2,.formation_h2,.competence_h2,.projet_h2,.experience_h2,.contacts_h2{
-    width: 150px;
-    height: 50px;
     padding: 10px;
-    margin: 20px auto 0px auto;
     text-align: center;
 }
 /******************** Presentation ***********************/
@@ -25,16 +22,19 @@
     margin-bottom: 30px;
 }
 #present{
-    height: 700px;
+    height: auto;
     margin-top: 100px;
 }
 .present_article{
-
     display: flex;
     flex-direction: column;
     justify-content: center;
     border-radius: 100px;
     text-align: center;
+}
+.present_h1{
+    padding-left: 30px;
+    padding-right: 30px;
 }
 .display_h1{
     margin-top: 35px;
@@ -47,6 +47,9 @@
     width: 40px;
     height: 40px;
 }
+.present_p{
+    padding: 50px;
+}
 /******************** Formation ***********************/
 #formation{
     height: 200px;
@@ -54,6 +57,8 @@
 .formation_p{
     text-align: center;
     font-weight: bold;
+    padding-left: 30px;
+    padding-right: 30px;
 }
 /******************** Competence ***********************/
 #competence{
@@ -82,7 +87,6 @@
 .icone{
     width: 70px;
     height: 70px;
-    color: white;
     margin: 40px;
 }
 .collapse_display{
@@ -104,10 +108,20 @@
 /******************** Contact ***********************/
 #contact{
     height: auto;
+    margin-bottom: 100px;
+}
+.enveloppe{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 /************************** ordinateur portable L max 1440px ************************/
 @media (max-width:1440px){
-
+.icone{
+    width: 70px;
+    height: 70px;
+    margin: 30px;
+}
 }
 /************************** ordinateur portable max 1024px ************************/
 @media (max-width:1024px){

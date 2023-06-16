@@ -2,15 +2,20 @@
     display: flex;
     flex-direction: column;
     text-align: center;
+    padding: 20px;
 }
-/* .MuiButtonBase-root-MuiButton-root{
+.button_color{
+    width: 650px;
+    height: 65px;
     color: white;
-} */
-.MuiButtonBase-root {
-    color: white;
-    /* border: 4px solid white;
-    border-radius: 15px;
-    border-style: none dotted; */
+    border: 5px solid white;
+    border-radius: 25px;
+    border-style: none dotted;
+    background-color: transparent;
+    margin: 15px;
+}
+.button_color:hover{
+    background-color:   rgba(255, 255, 255, 0.279);
 }
 .MuiCollapse-root{
     margin: 10px 40px 10px 40px;
@@ -18,3 +23,18 @@
     background-color:  rgba(255, 255, 255, 0.279);
     border-radius: 15px;
 }
+/************************** tablette max 768px ************************/
+@media (max-width:768px){
+    .button_color{
+        width: 300px;
+    }
+  }
+  /************************** mobile max 425px ************************/
+  @media (max-width:425px){
+    .container{
+        padding: 5px;
+    }
+    .button_color{
+        width: 250px;
+    }
+  }
