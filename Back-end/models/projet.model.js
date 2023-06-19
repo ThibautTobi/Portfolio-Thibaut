@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const projetShema = mongoose.Schema(
+const projetSchema = mongoose.Schema(
 {
 title           :   {type:String , required:true},
 imageUrl        :   {type:String , required:true},
@@ -10,6 +10,7 @@ langages         :
         langage  : {type:String , required:true}
     }],
 description   : {type:String , required:true},
-});
+},{ collection: 'projets' });
 
-module.exports = mongoose.model('projets', projetShema);
+module.exports = mongoose.model('projets', projetSchema);
+/*type:[Buffer] */

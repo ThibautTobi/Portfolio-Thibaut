@@ -8,10 +8,11 @@ function ContactForm () {
     name: '',
     prenom:'',
     email: '',
+    sujet: '',
     message: '',
   });
 
-  const { name, prenom, email, message } = formData;
+  const { name, prenom, email, sujet, message } = formData;
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -38,7 +39,7 @@ function ContactForm () {
     }
 
     // Réinitialisez le formulaire après l'envoi
-    setFormData({ name: '', prenom:'', email: '', message: '' });
+    setFormData({ name: '', prenom:'', email: '',sujet: '', message: '' });
   };
 
   return (
@@ -77,6 +78,20 @@ function ContactForm () {
           onChange={handleChange}
           required
           maxLength={40}
+        />
+      </div>
+      <div className='formulaire_display'>
+        <label htmlFor='sujet' className='sujet'>
+          Sujet :
+        </label>
+        <input
+          type='text'
+          className='sujet_input'
+          name='sujet'
+          value={sujet}
+          onChange={handleChange}
+          required
+          maxLength={60}
         />
       </div>
       <div className='formulaire_display'>

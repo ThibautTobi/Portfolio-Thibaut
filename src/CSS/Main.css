@@ -52,7 +52,7 @@
 }
 /******************** Formation ***********************/
 #formation{
-    height: 200px;
+    height: 300px;
 }
 .formation_p{
     text-align: center;
@@ -140,6 +140,9 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+    }
+    #formation{
+        height: 200px;
     }
 }
 /************************** mobile max 425px ************************/

@@ -1,9 +1,10 @@
-const API_BASE_URL = 'http://localhost:3000'; // Remplacez l'URL par l'URL de votre backend
+// Remplacez l'URL par l'URL de votre backend
+const API_BASE_URL = 'http://localhost:3000/portfolio';
 
 export const getProjects = async () => {
 
     try {
-        const response = await fetch(`${API_BASE_URL}/projects`);
+        const response = await fetch(`${API_BASE_URL}`);
         if (response.ok) {
           const data = await response.json();
           return data;
@@ -18,7 +19,7 @@ export const getProjects = async () => {
 export const postFormulaire = async (formData) => {
 
     try {
-        const response = await fetch(`${API_BASE_URL}/projects`, {
+        const response = await fetch(`${API_BASE_URL}`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -29,38 +30,9 @@ export const postFormulaire = async (formData) => {
           const data = await response.json();
           return data;
         } else {
-          throw new Error('Erreur lors de la création du projet');
+          throw new Error(`Erreur lors de l'envoie du formulaire`);
         }
       } catch (error) {
         console.error(error);
       }
     };
-
-///////////////////////////////////////////////////////////////////////////
-
-// const ProjectList = () => {
-//   const [projects, setProjects] = useState([]);
-
-//   useEffect(() => {
-//     const fetchProjects = async () => {
-//       const data = await getProjects();
-//       setProjects(data);
-//     };
-
-//     fetchProjects();
-//   }, []);
-
-//   return (
-//     <div>
-//       <h1>Liste des projets</h1>
-//       <ul>
-//         {projects.map((project) => (
-//           <li key={project.id}>{project.name}</li>
-//         ))}
-//       </ul>
-//     </div>
-//   );
-// };
-
-// export default ProjectList;
-

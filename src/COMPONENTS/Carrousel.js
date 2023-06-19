@@ -3,7 +3,7 @@ import SwiperCore, { Navigation, Pagination, Autoplay } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper-bundle.css';
 import { Modal, Backdrop, Fade } from '@mui/material';
-import data from '../DATA/Data';
+//import data from '../DATA/Data';
 import '../CSS/Carrousel.css';
 import { getProjects } from '../connection/Api';
 
@@ -41,11 +41,12 @@ function Carousel() {
         loop
         autoplay={{ delay: 6000 }}
       >
-        {data.map((item) => ( /* a remplacer data par projects pour recevoir du back end */
+        {projects.map((item) => ( /* a remplacer data par projects pour recevoir du back end */
           <SwiperSlide key={item.id}>
             <div className="carousel_item" onClick={() => handleOpenModal(item)}>
               <div className="carousel_item_overlay" />
-              <img src={item.logo} alt={item.name} className="carousel_item_img" />
+              <img src={item.logo} alt={item.name} className="carousel_item_img" /> 
+              {/* src={`data:image/jpeg;base64,${image.toString('base64')}`} */}
               <h3>{item.name}</h3>
               <a href={item.lien}>Lien vers le projet</a>
               <ul>
@@ -84,4 +85,3 @@ function Carousel() {
 }
 
 export default Carousel;
-

@@ -8,8 +8,8 @@
     flex-direction: column;
     align-items: center;
 }
-.name_input,.prenom_input,.email_input{
-    width: 300px;
+.name_input,.prenom_input,.email_input,.input_sujet{
+    width: 600px;
     height: 50px;
     border: none;
     border-radius: 10px;
@@ -20,7 +20,7 @@
 .message_input{
     overflow:auto;
     width: 600px;
-    min-width: 500px;
+    min-width: 600px;
     max-width: 900px;
     height: 250px;
     min-height: 200px;
@@ -41,7 +41,7 @@ font-weight: bold;
 margin: 15px 0px 40px 0px;
 font-size: 20px;
 }
-.name_input:focus,.prenom_input:focus,.email_input:focus,.message_input:focus{
+.name_input:focus,.prenom_input:focus,.email_input:focus,.input_sujet:focus,.message_input:focus{
     border: 5px solid white;
     outline: none;
     color: white;
@@ -54,11 +54,15 @@ font-size: 20px;
 }
 /************************** format ordinateur max 1024px ************************/
 @media (max-width:1024px){
+    .name_input,.prenom_input,.email_input,.input_sujet{
+        width: 400px;
+        height: 50px;
+    }
     .message_input{
         width: 400px;
         height: 400px;
     
-        min-width: 500px;
+        min-width: 400px;
         max-width: 600px;
     
         min-height: 200px;
@@ -67,9 +71,9 @@ font-size: 20px;
 }
 /************************** format tablette max 768px ************************/
 @media (max-width:768px){
-.name_input,.prenom_input,.email_input{
+.name_input,.prenom_input,.email_input,.input_sujet{
     width: 300px;
-    height: 50px;
+
 }
 .message_input{
     width: 300px;
@@ -86,8 +90,8 @@ font-size: 20px;
 }
 /************************** mobile max 425px ************************/
 @media (max-width:425px){
-    .name_input,.prenom_input,.email_input{
-        width: 200px;
+    .name_input,.prenom_input,.email_input,.input_sujet{
+        width: 250px;
         height: 50px;
     }
     .message_input{

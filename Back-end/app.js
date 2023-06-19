@@ -1,15 +1,12 @@
 const express = require('express');
 const mongoose = require('mongoose');
 
-/** plugin  contre les attaques d'injection de code malveillant dans les requêtes MongoDB **/
-// const mongoSanitize = require('mongo-sanitize');
-
 /*** utilisation.env cache donné sensible */
 require('dotenv').config();
 
 /**** import de mes différentes routes ****/
-const projets_Routes = require('./routes/projets_Routes');
-const formulaires_Routes = require('./routes/formulaires_Routes');
+const projets_Routes = require('./routes/projets.Routes');
+const formulaires_Routes = require('./routes/formulaires.Routes');
 
 /** Création de l'application Express **/
 const app = express();
@@ -33,44 +30,8 @@ app.use((req, res, next) => {
   next();
 });
 
-/** utilisation du plugin mongo sanitize**/
-// app.use((req, res, next) => {
-//   // Nettoie les valeurs des paramètres de requête
-//   req.body = mongoSanitize(req.body);
-//   req.query = mongoSanitize(req.query);
-//   next();
-// });
-
-
 /**** dispatch routage *****/
 app.use(projets_Routes);
 app.use(formulaires_Routes);
 
 module.exports = app;
-
-
-/**
- 
-// Route pour récupérer tous les projets
-app.get('/projects', async (req, res) => {
-  try {
-    const projects = await Project.find();
-    res.json(projects);
-  } catch (error) {
-    res.status(500).json({ error: error.message });
-  }
-});
-
-// Route pour créer un nouveau projet
-app.post('/projects', async (req, res) => {
-  try {
-    const { name, description } = req.body;
-    const project = new Project({ name, description });
-    await project.save();
-    res.status(201).json(project);
-  } catch (error) {
-    res.status(500).json({ error: error.message });
-  }
-});
- 
-**/

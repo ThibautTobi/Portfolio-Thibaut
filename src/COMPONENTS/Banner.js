@@ -1,5 +1,5 @@
-import banner from '../IMAGES/banniere.jpg';
-import perso from '../IMAGES/banniere_2.jpg';
+import banner from '../IMAGES/banniere.webp';
+import perso from '../IMAGES/thibaut.webp';
 import '../CSS/Banner.css';
 
 export default function Banner (){
