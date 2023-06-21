@@ -8,7 +8,6 @@ import Collapses from '../COMPONENTS/Collapse';
 import Carousel from '../COMPONENTS/Carrousel';
 import { SlideLeft } from "../COMPONENTS/Effets";
 import enveloppe from "../IMAGES/icone_envelope.svg";
-//import ProgresBar from "../COMPONENTS/ProgressBar";
 
 function Home (){
 
@@ -151,21 +150,6 @@ function Projets (){
     )
 }
 
-// function Experiences (){
-
-//     return(
-//         <section id='experience'>
-//             <article className="competence_article">
-//                 <h2 className="experience_h2">Expériences</h2> 
-//                 <p className="competence_p">
-//                     En augmentation jours aprés jours
-//                 </p>
-//                 <ProgresBar/>
-//             </article>
-//         </section>
-//     )
-// }
-
 function Contacts (){
 
     return(
@@ -187,7 +171,6 @@ return  (
     <Formation />
     <Compétences />
     <Projets />
-    {/* <Experiences /> */}
     <Contacts />
 </div>
 )
