@@ -1,10 +1,9 @@
 import { useState, useEffect } from "react";
 
 function useThemeClass() {
-  const [theme, setTheme] = useState('light-theme');
+  const [theme, setTheme] = useState('dark-theme');
 
   function toggleTheme () {
-    console.log(theme)
     setTheme(theme === 'light-theme' ? 'dark-theme' : 'light-theme');
   };
 

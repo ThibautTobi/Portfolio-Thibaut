@@ -53,6 +53,7 @@
 /******************** Formation ***********************/
 #formation{
     height: 300px;
+    padding: 10px;
 }
 .formation_p{
     text-align: center;
@@ -115,20 +116,20 @@
     justify-content: center;
     align-items: center;
 }
-/************************** ordinateur portable L max 1440px ************************/
-@media (max-width:1440px){
+/************************** ordinateur portable L max 1439px ************************/
+@media (max-width:1439px){
 .icone{
     width: 70px;
     height: 70px;
     margin: 30px;
 }
 }
-/************************** ordinateur portable max 1024px ************************/
-@media (max-width:1024px){
+/************************** ordinateur portable max 1023px ************************/
+@media (max-width:1023px){
 
 }
-/************************** tablette max 768px ************************/
-@media (max-width:768px){
+/************************** tablette max 767px ************************/
+@media (max-width:767px){
     .competence_display{
         display: flex;
         flex-direction: column;
@@ -142,10 +143,13 @@
         align-items: center;
     }
     #formation{
-        height: 200px;
+        height: auto;
+    }
+    .formation_p{
+        font-size: 25px;
     }
 }
-/************************** mobile max 425px ************************/
-@media (max-width:425px){
+/************************** mobile max 424px ************************/
+@media (max-width:424px){
 
 }

@@ -1,12 +1,9 @@
 import React,{ useState } from "react";
 import { Link } from 'react-router-dom';
 import '../CSS/NavBar.css'
-import sun from "../IMAGES/icone_light.svg";
-import night from "../IMAGES/icone_nightlight.svg";
-import useThemeClass from '../COMPONENTS/Theme';
 
 function NavBar (){
-    const { theme, toggleTheme } = useThemeClass();
+    
     const [showLinks ,setShowLinks] = useState(false);
 
     function handleShow (){
@@ -35,11 +32,8 @@ function NavBar (){
                 <li className="navbar_item">
                     <Link to='#contact' reloadDocument className="navbar_link">Contacts</Link>
                 </li>
-                <button className='mode_button' onClick={toggleTheme}>
-                    <img className='mode_button_img' src={theme === 'light-theme' ? night : sun } alt='mode_theme'></img>
-                </button>
             </ul>
-            <button className="navbar_burger" onClick={handleShow}>
+            <button className="navbar_burger" aria-label="menu" onClick={handleShow}>
                 <span className="burger_bar"></span>
             </button>
         </nav>

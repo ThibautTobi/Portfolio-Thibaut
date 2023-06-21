@@ -4,7 +4,7 @@
   box-sizing: border-box;
   font-size: 40px;
   font-family: 'Ubuntu', sans-serif, Courier, monospace;
-  color: white;
+  color: #242424;
 }
 html,body,#root {
   width: 100%;
@@ -39,61 +39,62 @@ ul{
   text-align: center;
 }
 a{
-  font-family: 'Ubuntu', cursive, sans-serif, Courier, monospace;
+  font-family: 'caveat', cursive, sans-serif, Courier, monospace;
   font-weight: 700;
   text-decoration: none;
-  color: white;
-  font-size: 35px;
+  color:#242424;
+  font-size: 50px;
   font-weight: 500;
   padding: 15px;
   }
   a:hover{
     cursor: pointer;
     background-color: rgba(255, 255, 255,0.2);
+    padding: 10px;
     border-radius: 20px;
   }
-/************************** ordinateur portable L max 1440px ************************/
-@media (max-width:1440px){
+/************************** ordinateur portable L max 1439px ************************/
+@media (max-width:1439px){
   *{
     font-size: 30px;
   }
   a{
-    font-size: 25px;
+    font-size: 40px;
   }
   }
-/************************** ordinateur portable max 1024px ************************/
-@media (max-width:1024px){
+/************************** ordinateur portable max 1023px ************************/
+@media (max-width:1023px){
   *{
-    font-size: 25px;
+    font-size: 30px;
   }
   h1{
     font-size: 50px;
   }
   a{
-    font-size: 20px;
+    font-size: 30px;
   }
 }
-/************************** tablette max 768px ************************/
-@media (max-width:768px){
+/************************** tablette max 767px ************************/
+@media (max-width:767px){
   *{
     font-size: 20px;
   }
   h1{
-    font-size: 30px;
+    font-size: 40px;
   }
   h2{
-    font-size: 30px
+    font-size: 60px
   }
   a{
-    font-size: 18px;
+    font-size: 25px;
   }
 }
-/************************** mobile max 425px ************************/
-@media (max-width:425px){
+/************************** mobile max 424px ************************/
+@media (max-width:424px){
   *{
-    font-size: 15px;
+    font-size: 20px;
   }
   h2{
-    font-size: 30px;
+    font-size: 50px;
   }
 }

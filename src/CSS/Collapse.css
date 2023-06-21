@@ -7,7 +7,7 @@
 .button_color{
     width: 650px;
     height: 65px;
-    color: white;
+    color: #242424;
     border: 5px solid white;
     border-radius: 25px;
     border-style: none dotted;
@@ -15,13 +15,18 @@
     margin: 15px;
 }
 .button_color:hover{
-    background-color:   rgba(255, 255, 255, 0.279);
+    background-color:   rgba(255, 255, 255, 0.1);
 }
 .MuiCollapse-root{
     margin: 10px 40px 10px 40px;
     padding: 10px;
-    background-color:  rgba(255, 255, 255, 0.279);
+    background-color:  rgba(255, 255, 255, 0.1);
     border-radius: 15px;
+    text-align: left;
+}
+.display_li{
+    text-align: left;
+    font-size: 30px;
 }
 /************************** tablette max 768px ************************/
 @media (max-width:768px){

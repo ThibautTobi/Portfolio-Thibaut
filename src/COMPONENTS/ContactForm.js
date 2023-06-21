@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import '../CSS/ContactForm.css';
-import { postFormulaire } from '../connection/Api';
+import emailjs from 'emailjs-com';
+//import { postFormulaire } from '../connection/Api';
 
 function ContactForm () {
 
@@ -20,27 +21,53 @@ function ContactForm () {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-  
-    try {
-      const response = await postFormulaire(formData);
-      
-      console.log('Formulaire soumis avec succès');
-      console.log(response);
 
+    try {
+      await emailjs.sendForm(
+        'service_portfolio',
+        'template_6zkvgc6',
+        e.target,
+        'XSaRwpZUYQrzWinOX'
+      );
+
+      console.log('Formulaire soumis avec succès');
       // affichage d'une alerte de succès
       alert('Le formulaire a été soumis avec succès');
     } catch (error) {
-
       console.error('Erreur lors de la soumission du formulaire');
       console.error(error);
-
-      //affichage d'une alerte
+      //affichage d'une alerte d'erreur
       alert(`Une erreur s'est produite lors de la soumission du formulaire.`);
     }
+      // Réinitialisez le formulaire après l'envoi
+      setFormData({ name: '', prenom:'', email: '',sujet: '', message: '' });
+  };
+    
+  /** version avec back end NodeMailer **/
+
+  // const handleSubmit = async (e) => {
+  //   e.preventDefault();
+
+    // try {
+    //   const response = await postFormulaire(formData);
+      
+    //   console.log('Formulaire soumis avec succès');
+    //   console.log(response);
+
+    //   // affichage d'une alerte de succès
+    //   alert('Le formulaire a été soumis avec succès');
+    // } catch (error) {
+
+    //   console.error('Erreur lors de la soumission du formulaire');
+    //   console.error(error);
+
+    //   //affichage d'une alerte
+    //   alert(`Une erreur s'est produite lors de la soumission du formulaire.`);
+    // }
 
     // Réinitialisez le formulaire après l'envoi
-    setFormData({ name: '', prenom:'', email: '',sujet: '', message: '' });
-  };
+  //   setFormData({ name: '', prenom:'', email: '',sujet: '', message: '' });
+  // };
 
   return (
     <form onSubmit={handleSubmit} className='formulaire'>
@@ -48,7 +75,7 @@ function ContactForm () {
         <label htmlFor="name">Nom :</label>
         <input
           type="text"
-          className="name_input"
+          id="name"
           name="name"
           value={name}
           onChange={handleChange}
@@ -57,10 +84,10 @@ function ContactForm () {
         />
       </div>
       <div className='formulaire_display'>
-        <label htmlFor="prenom" className='prenom'>Prénom :</label>
+        <label htmlFor="prenom">Prénom :</label>
         <input
           type="text"
-          className="prenom_input"
+          id="prenom"
           name="prenom"
           value={prenom}
           onChange={handleChange}
@@ -69,10 +96,10 @@ function ContactForm () {
         />
       </div>
       <div className='formulaire_display'>
-        <label htmlFor="email" className='email'>Email :</label>
+        <label htmlFor="email" >Email :</label>
         <input
           type="email"
-          className="email_input"
+          id="email"
           name="email"
           value={email}
           onChange={handleChange}
@@ -81,12 +108,12 @@ function ContactForm () {
         />
       </div>
       <div className='formulaire_display'>
-        <label htmlFor='sujet' className='sujet'>
+        <label htmlFor='sujet' >
           Sujet :
         </label>
         <input
           type='text'
-          className='sujet_input'
+          id='sujet'
           name='sujet'
           value={sujet}
           onChange={handleChange}
@@ -95,9 +122,9 @@ function ContactForm () {
         />
       </div>
       <div className='formulaire_display'>
-        <label htmlFor="message"className='message'>Message :</label>
+        <label htmlFor="message">Message :</label>
         <textarea
-          className="message_input"
+          id="message"
           name="message"
           value={message}
           onChange={handleChange}

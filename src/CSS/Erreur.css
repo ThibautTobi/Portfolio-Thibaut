@@ -1,16 +1,44 @@
-/************************** ordinateur portable L max 1440px ************************/
-@media (max-width:1440px){
-
+.erreur{
+    text-align: center;
+    margin: 30px;
+}
+.erreur_img{
+    width: 400px;
+    height: 400px;
+    margin: 150px;
+}
+.erreur_h2,.erreur_p,.erreur_link{
+    color: grey;
+}
+.erreur_link{
+    text-decoration: underline;
 }
 /************************** ordinateur portable max 1024px ************************/
-@media (max-width:1024px){
-
+@media (max-width:1023px){
+    .erreur_img{
+        margin: 70px;
+    }
 }
 /************************** tablette max 768px ************************/
-@media (max-width:768px){
-
+@media (max-width:767px){
+    .erreur_img{
+        width: 300px;
+        height: 300px;
+        margin: 50px;
+    }
 }
 /************************** mobile max 425px ************************/
-@media (max-width:425px){
-
+@media (max-width:424px){
+    .erreur{
+        margin-bottom: 80px;
+        margin-top: 80px;
+    }
+    .erreur_img{
+        width: 200px;
+        height: 200px;
+        margin: 40px;
+    }
+    .erreur_p{
+        margin:30px;
+    }
 }

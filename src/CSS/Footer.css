@@ -23,6 +23,15 @@ footer{
     color: white;
     margin: 20px;
 }
+.mode_button{
+    background-color:#C2B280;
+    border: none;
+  }
+  .mode_button_img{
+  width: 40px;
+  height: 40px;
+  background-color:#C2B280;
+  }
 .footer_p{
     font-size: 20px;
 }

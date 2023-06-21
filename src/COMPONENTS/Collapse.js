@@ -7,34 +7,34 @@ function MultipleCollapses() {
     { id: 1,
       title: 'Mes Compétences en Front-End',
       content:[
-      `intégration web avec html et css ,
-      intégrer du contenu conformément à une maquette ,
-      implémenter une interface responsive ,
-      suivre le déroulement du projet grâce à un outil de gestion de projet (trello) ,
-      rédiger les spécifications techniques d'un projet web à partir des besoins fonctionnels ,
-      découper une fonctionnalités en tâches pour préparer le développement ,
-      présenter la solution technique ,
-      mettre en place une méthode de veille technologique ,
-      versionner son projet avec git et github ,
-      installer un environnement de développement front-end ,
-      optimiser les performances d'un site web ,
-      débugger un site web grâce aux chrome devtools ,
-      rédiger un cahier de recette pour tester un site ,
-      developpement web avec javascript: ,
-      récupérer les donnés utilisateurs dans le javascript via des formulaires ,
-      manipuler les éléments du DOM avec JavScript ,
-      gérer les événements utilisateurs avec JavaScript ,
-      configurer la navigation entre les pages de l'application avec react router ,
-      initialiser une application avec create react app ,
-      developper des éléments de l'interface d'un site web grâce à des composants react. `,
+        '- intégration web avec html et css.',
+        '- intégrer du contenu conformément à une maquette.',
+        '- implémenter une interface responsive.',
+        '- suivre le déroulement du projet grâce à un outil de gestion de projet (trello).',
+        '- rédiger les spécifications techniques d\'un projet web à partir des besoins fonctionnels.',
+        '- découper une fonctionnalité en tâches pour préparer le développement.',
+        '- présenter la solution technique.',
+        '- mettre en place une méthode de veille technologique.',
+        '- versionner son projet avec git et github.',
+        '- installer un environnement de développement front-end.',
+        '- optimiser les performances d\'un site web.',
+        '- débugger un site web grâce aux chrome devtools.',
+        '- rédiger un cahier de recette pour tester un site.',
+        '- développement web avec JavaScript:',
+        '- récupérer les données utilisateurs dans le JavaScript via des formulaires.',
+        '- manipuler les éléments du DOM avec JavaScript.',
+        '- gérer les événements utilisateurs avec JavaScript.',
+        '- configurer la navigation entre les pages de l\'application avec react router.',
+        '- initialiser une application avec create react app.',
+        '- développer des éléments de l\'interface d\'un site web grâce à des composants react.',
       ],
       isOpen: false },
     { id: 2,
       title: 'Mes Compétences en Back-End',
       content:[ 
-      `implémenter un modéle logique de données conformément à la réglementation ,
-      mettre en oeuvre des opérations CRUD de maniére sécurisée ,
-      stocker des données de maniére sécurisée `
+        '- implémenter un modèle logique de données conformément à la réglementation.',
+        '- mettre en oeuvre des opérations CRUD de manière sécurisée.',
+        '- stocker des données de manière sécurisée.'
     ],
       isOpen: false }
   ]);
@@ -58,7 +58,11 @@ function MultipleCollapses() {
             {item.title}
           </button>
           <Collapse in={item.isOpen}>
-            <div>{item.content}</div>
+            <ul className='display_li'>
+                {item.content.map((el) => (
+                  <li key={el}>{el}</li>
+                ))}
+            </ul>
           </Collapse>
         </div>
       ))}

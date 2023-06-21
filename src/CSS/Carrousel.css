@@ -5,15 +5,15 @@
   color: white;
 }
 .swiper-button-prev{
-  left: 300px;
+  left: 100px;
   right: auto;
 }
 .swiper-button-next{
-  right: 300px;
+  right: 100px;
   left: auto;
 }
 .swiper-pagination{
-  margin-top: 20px;
+   position: relative;
 }
 :root {
   --swiper-theme-color: #ffffff;
@@ -46,7 +46,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(211, 211, 211, 0.5); /* Couleur de fond gris clair transparent */
+  background-color: rgba(211, 211, 211, 0.5);
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
   border-radius: 61px;
@@ -70,7 +70,6 @@
   width: 100%;
   height: auto;
   outline: none;
-  /* overflow-y: auto; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -101,31 +100,46 @@
 .modal p{
   text-align: center;
 }
-/************************** ordinateur portable max 1440px ************************/
-@media(max-width:1440px){
+.closeButton {
+  position:absolute;
+  top: 10px;
+  left: 550px;
+  color: white;
+}
+/************************** ordinateur portable max 1439px ************************/
+@media(max-width:1439px){
   .carousel_item{
     width: 500px;
 }
+.swiper-button-prev{
+  left: 0px;
+  right: auto;
+}
+.swiper-button-next{
+  right: 0px;
+  left: auto;
+}
 .modal {
-  max-width: 400px;
+  max-width: 900px;
+}
+.closeButton {
+  left: 370px;
 }
 }
-/************************** ordinateur portable max 1024px ************************/
-@media(max-width:1024px){
+/************************** ordinateur portable max 1023px ************************/
+@media(max-width:1023px){
   .swiper{
     margin: 0px 50px 20px 50px;
   }
-  .swiper-button-prev{
-    left: 0px;
-    right: auto;
+  .modal {
+    max-width: 700px;
   }
-  .swiper-button-next{
-    right: 0px;
-    left: auto;
+  .closeButton {
+    left: 290px;
   }
 }
-/************************** tablette max 768px ************************/
-@media (max-width:768px){
+/************************** tablette max 767px ************************/
+@media (max-width:767px){
   .carousel_item{
     width: 300px;
 }
@@ -133,9 +147,15 @@
     width: 150px;
     height: 200px;
 }
+.modal {
+  max-width: 400px;
 }
-/************************** mobile max 425px ************************/
-@media (max-width:425px){
+.closeButton {
+  left: 150px;
+}
+}
+/************************** mobile max 424px ************************/
+@media (max-width:424px){
   .swiper{
     margin: 0px 10px 50px 10px;
   }
@@ -148,5 +168,11 @@
 .carousel_item_img{
     width: 150px;
     height: 200px;
+}
+.modal {
+  max-width: 300px;
+}
+.closeButton {
+  left: 110px;
 }
 }

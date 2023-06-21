@@ -1,27 +1,29 @@
-import React, { useState,useEffect } from 'react';
+import React, { useState } from 'react';
 import SwiperCore, { Navigation, Pagination, Autoplay } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper-bundle.css';
-import { Modal, Backdrop, Fade } from '@mui/material';
-//import data from '../DATA/Data';
+import { Modal, Backdrop, Fade,IconButton } from '@mui/material';
+import CloseIcon from '@mui/icons-material/Close';
+import data from '../DATA/Data';
 import '../CSS/Carrousel.css';
-import { getProjects } from '../connection/Api';
+//import { getProjects } from '../connection/Api';
+//import Booki from '../IMAGES/projetBooki.webp';
 
 SwiperCore.use([Navigation, Pagination, Autoplay]);
 
 function Carousel() {
-  const [projects, setProjects] = useState([]);
+  //const [projects, setProjects] = useState([]);
   const [selectedItem, setSelectedItem] = useState(null);
 
 
-  useEffect(() => {
-    const fetchProjects = async () => {
-      const projectsData = await getProjects();
-      setProjects(projectsData);
-    };
+  // useEffect(() => {
+  //   const fetchProjects = async () => {
+  //     const projectsData = await getProjects();
+  //     setProjects(projectsData);
+  //   };
   
-    fetchProjects();
-  }, []);
+  //   fetchProjects();
+  // }, []);
   
   const handleOpenModal = (item) => {
     setSelectedItem(item);
@@ -41,12 +43,11 @@ function Carousel() {
         loop
         autoplay={{ delay: 6000 }}
       >
-        {projects.map((item) => ( /* a remplacer data par projects pour recevoir du back end */
+        {data.map((item) => ( /* a remplacer data par projects pour recevoir du back end */
           <SwiperSlide key={item.id}>
             <div className="carousel_item" onClick={() => handleOpenModal(item)}>
               <div className="carousel_item_overlay" />
-              <img src={item.logo} alt={item.name} className="carousel_item_img" /> 
-              {/* src={`data:image/jpeg;base64,${image.toString('base64')}`} */}
+              <img src={item.image} alt={item.name} className="carousel_item_img" />
               <h3>{item.name}</h3>
               <a href={item.lien}>Lien vers le projet</a>
               <ul>
@@ -68,8 +69,17 @@ function Carousel() {
       >
         <Fade in={selectedItem !== null}>
           <div className="modal">
+            <IconButton
+              aria-label="close"
+              color="inherit"
+              edge="end"
+              onClick={handleCloseModal}
+              className="closeButton"
+            >
+              <CloseIcon />
+            </IconButton>
             <h2>{selectedItem?.name}</h2>
-            <img src={selectedItem?.logo} alt={selectedItem?.name}/>
+            <img src={selectedItem?.image} alt={selectedItem?.name}/>
             <a href={selectedItem?.lien}>Lien vers le projet</a>
             <ul>
               {selectedItem?.langage.map((lang) => (
