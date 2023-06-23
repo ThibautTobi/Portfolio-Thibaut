@@ -35,7 +35,7 @@
 .carousel_item_img{
     align-items: center;
     border-radius: 10px;
-    width: 400px;
+    width: 450px;
     height: 500px;
     background-color: grey;
     object-fit: fill;
@@ -80,8 +80,8 @@
 }
 .modal img{
   border-radius: 10px;
-  width: 250px;
-  height: 300px;
+  width: 450px;
+  height: 500px;
   object-fit: fill;
 }
 .modal a {
@@ -144,11 +144,15 @@
     width: 300px;
 }
 .carousel_item_img{
-    width: 150px;
-    height: 200px;
+    width: 250px;
+    height: 300px;
 }
 .modal {
   max-width: 400px;
+}
+.modal img{
+  width: 250px;
+  height: 300px;
 }
 .closeButton {
   left: 150px;
@@ -164,10 +168,6 @@
   }
   .carousel_item{
     width:240px;
-}
-.carousel_item_img{
-    width: 150px;
-    height: 200px;
 }
 .modal {
   max-width: 300px;

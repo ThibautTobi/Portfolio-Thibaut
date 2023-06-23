@@ -9,16 +9,3 @@ header{
     height: 75px;
   }
 }
-/************************** ordinateur portable max 1024px ************************/
-@media (max-width:1024px){
-
-}
-/************************** tablette max 768px ************************/
-@media (max-width:767px){
-
-}
-/************************** mobile max 425px ************************/
-@media (max-width:425px){
-
-}
-    /*linear-gradient(to bottom, #C2B280, white);*/
