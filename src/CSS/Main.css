@@ -73,7 +73,7 @@
     margin: 25px;
 }
 .competence_front,.competence_back,.competence_base,.competence_outils{
-    border: 4px solid white ;
+    border: 4px solid #242424 ;
     border-style: dotted none;
     border-radius: 30px;
     padding: 20px;

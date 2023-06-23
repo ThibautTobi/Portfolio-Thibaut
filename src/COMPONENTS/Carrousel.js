@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import SwiperCore, { Navigation, Pagination, Autoplay } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper-bundle.css';
@@ -7,14 +7,25 @@ import CloseIcon from '@mui/icons-material/Close';
 import data from '../DATA/Data';
 import '../CSS/Carrousel.css';
 //import { getProjects } from '../connection/Api';
-//import Booki from '../IMAGES/projetBooki.webp';
 
 SwiperCore.use([Navigation, Pagination, Autoplay]);
 
 function Carousel() {
   //const [projects, setProjects] = useState([]);
   const [selectedItem, setSelectedItem] = useState(null);
+  const [isMobile, setIsMobile] = useState(false);
 
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 767);
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
   // useEffect(() => {
   //   const fetchProjects = async () => {
@@ -47,7 +58,7 @@ function Carousel() {
           <SwiperSlide key={item.id}>
             <div className="carousel_item" onClick={() => handleOpenModal(item)}>
               <div className="carousel_item_overlay" />
-              <img src={item.image} alt={item.name} className="carousel_item_img" />
+              <img src={isMobile ? item.imageMobile : item.image} alt={item.name} className="carousel_item_img" />
               <h3>{item.name}</h3>
               <a href={item.lien}>Lien vers le projet</a>
               <ul>
@@ -79,7 +90,7 @@ function Carousel() {
               <CloseIcon />
             </IconButton>
             <h2>{selectedItem?.name}</h2>
-            <img src={selectedItem?.image} alt={selectedItem?.name}/>
+            <img src={isMobile ? selectedItem?.imageMobile : selectedItem?.image} alt={selectedItem?.name}/>
             <a href={selectedItem?.lien}>Lien vers le projet</a>
             <ul>
               {selectedItem?.langage.map((lang) => (

@@ -11,7 +11,6 @@ function NavBar (){
     };
 
     return(
-
         <nav className={`navbar ${ showLinks ? 'show_nav' : 'hide_nav'}`}>
             <ul className="navbar_links">
                 <li className="navbar_item">
@@ -26,9 +25,6 @@ function NavBar (){
                 <li className="navbar_item">
                     <Link to='#projet' reloadDocument className="navbar_link">Projets</Link>
                 </li>
-                {/* <li className="navbar_item">
-                    <Link to='#experience' reloadDocument className="navbar_link">Expériences</Link>
-                </li> */}
                 <li className="navbar_item">
                     <Link to='#contact' reloadDocument className="navbar_link">Contacts</Link>
                 </li>
