@@ -1,0 +1,32 @@
+{
+  "files": {
+    "main.css": "/Portfolio-Thibaut/static/css/main.4e691789.css",
+    "main.js": "/Portfolio-Thibaut/static/js/main.c8ebcf3a.js",
+    "static/media/banniere.webp": "/Portfolio-Thibaut/static/media/banniere.cdea4051662c2cc350e8.webp",
+    "static/media/Kasa.webp": "/Portfolio-Thibaut/static/media/Kasa.3c2e029677c94f26c045.webp",
+    "static/media/Sophie_Bluel.webp": "/Portfolio-Thibaut/static/media/Sophie_Bluel.7cebeb19adaadfc8e571.webp",
+    "static/media/Nina_Carducci.webp": "/Portfolio-Thibaut/static/media/Nina_Carducci.a3a214860e66befc9ba1.webp",
+    "static/media/Booki.webp": "/Portfolio-Thibaut/static/media/Booki.0568ef5f783747837a2a.webp",
+    "static/media/thibaut.webp": "/Portfolio-Thibaut/static/media/thibaut.ba2007c8faada469e169.webp",
+    "static/media/mini_Kasa.webp": "/Portfolio-Thibaut/static/media/mini_Kasa.d36f39ac15d61cb2f0b8.webp",
+    "static/media/qwenta.webp": "/Portfolio-Thibaut/static/media/qwenta.4c9fe91bebe5d511d9b1.webp",
+    "static/media/mini_Sophie_Bluel.webp": "/Portfolio-Thibaut/static/media/mini_Sophie_Bluel.3583a2a6e67f24a4972b.webp",
+    "static/media/mini_Nina_Carducci.webp": "/Portfolio-Thibaut/static/media/mini_Nina_Carducci.2dcf0b1de702c095d48b.webp",
+    "static/media/mini_Booki.webp": "/Portfolio-Thibaut/static/media/mini_Booki.a7e249ae72bf4599f561.webp",
+    "static/media/Grimoire.webp": "/Portfolio-Thibaut/static/media/Grimoire.09759248b8b13a9a6a67.webp",
+    "static/media/mini_qwenta.webp": "/Portfolio-Thibaut/static/media/mini_qwenta.8d96925b947b246c953e.webp",
+    "static/media/mini_Grimoire.webp": "/Portfolio-Thibaut/static/media/mini_Grimoire.b34bb8ef36d564d2d02d.webp",
+    "static/media/icone_mongodb.svg": "/Portfolio-Thibaut/static/media/icone_mongodb.7122712ba60f20d6060d37d665a30fb1.svg",
+    "static/media/icone_erreur.svg": "/Portfolio-Thibaut/static/media/icone_erreur.c50284536b19295bb8d3d3f478f561e2.svg",
+    "static/media/icone_light.svg": "/Portfolio-Thibaut/static/media/icone_light.e42a9d0ecd6a219d3f2973b03c69412a.svg",
+    "index.html": "/Portfolio-Thibaut/index.html",
+    "static/media/icone_nightlight.svg": "/Portfolio-Thibaut/static/media/icone_nightlight.4ee5de0492a76389eca1bf7d09515108.svg",
+    "static/media/icone_envelope.svg": "/Portfolio-Thibaut/static/media/icone_envelope.6cf107e63991954524627284cbf22513.svg",
+    "main.4e691789.css.map": "/Portfolio-Thibaut/static/css/main.4e691789.css.map",
+    "main.c8ebcf3a.js.map": "/Portfolio-Thibaut/static/js/main.c8ebcf3a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4e691789.css",
+    "static/js/main.c8ebcf3a.js"
+  ]
+}
