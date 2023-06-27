@@ -58,12 +58,22 @@ function Carousel() {
           <SwiperSlide key={item.id}>
             <div className="carousel_item" onClick={() => handleOpenModal(item)}>
               <div className="carousel_item_overlay" />
+              <h2>{item.name}</h2>
+              <h3>{item.projet}</h3>
               <img src={isMobile ? item.imageMobile : item.image} alt={item.name} className="carousel_item_img" />
-              <h3>{item.name}</h3>
               <a href={item.lien}>Lien vers le projet</a>
+              <h3>langages utilisés</h3>
               <ul>
                 {item.langage.map((lang) => (
                   <li key={lang}>{lang}</li>
+                ))}
+              </ul>
+              <h3>les Problématiques rencontrées</h3>
+              <p>{item.problematique}</p>
+              <h3>les compétences utilisés</h3>
+              <ul>
+                {item.competence.map((item,index) => (
+                  <li key={index}>{item}</li>
                 ))}
               </ul>
             </div>
@@ -90,14 +100,25 @@ function Carousel() {
               <CloseIcon />
             </IconButton>
             <h2>{selectedItem?.name}</h2>
+            <h3>{selectedItem?.projet}</h3>
             <img src={isMobile ? selectedItem?.imageMobile : selectedItem?.image} alt={selectedItem?.name}/>
             <a href={selectedItem?.lien}>Lien vers le projet</a>
+            <h3>langages utilisés</h3>
             <ul>
               {selectedItem?.langage.map((lang) => (
                 <li key={lang}>{lang}</li>
               ))}
             </ul>
+            <h3>Description</h3>
             <p>{selectedItem?.description}</p>
+            <h3>les Problématiques rencontrées</h3>
+            <p>{selectedItem?.problematique}</p>
+            <h3>les compétences utilisés</h3>
+            <ul>
+                {selectedItem?.competence.map((item,index) => (
+                  <li key={index}>{item}</li>
+                ))}
+            </ul>
           </div>
         </Fade>
       </Modal>

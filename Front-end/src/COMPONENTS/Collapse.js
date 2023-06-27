@@ -19,6 +19,7 @@ function MultipleCollapses() {
         '- installer un environnement de développement front-end.',
         '- optimiser les performances d\'un site web.',
         '- débugger un site web grâce aux chrome devtools.',
+        '- optimiser l\'accessibilité avec wave evaluation tool.',
         '- rédiger un cahier de recette pour tester un site.',
         '- développement web avec JavaScript:',
         '- récupérer les données utilisateurs dans le JavaScript via des formulaires.',
@@ -31,10 +32,12 @@ function MultipleCollapses() {
       isOpen: false },
     { id: 2,
       title: 'Mes Compétences en Back-End',
-      content:[ 
+      content:[
+        '- installer un environnement de développement back-end.', 
         '- implémenter un modèle logique de données conformément à la réglementation.',
         '- mettre en oeuvre des opérations CRUD de manière sécurisée.',
-        '- stocker des données de manière sécurisée.'
+        '- stocker des données de manière sécurisée.',
+        '- utilisation d\'une base de donnée.', 
     ],
       isOpen: false }
   ]);
