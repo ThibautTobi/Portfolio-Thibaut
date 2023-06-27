@@ -15,18 +15,21 @@ h1{
   font-size: 70px;
   font-family: 'Caveat', cursive, sans-serif, Courier, monospace;
   font-weight: 700;
+  text-align: center;
 }
 h2{
   font-size: 70px;
   font-family: 'Caveat', cursive, sans-serif, Courier, monospace;
   font-weight: 600;
   margin: 20px 0px 20px 0px;
+  text-align: center;
 }
 h3{
   font-size: 45px;
   font-family: 'Caveat', cursive, sans-serif, Courier, monospace;
   font-weight: 500;
   margin: 20px;
+  text-align: center;
 }
 li{
   list-style: none;
@@ -51,6 +54,9 @@ a{
     background-color: rgba(255, 255, 255,0.2);
     padding: 10px;
     border-radius: 20px;
+  }
+  p{
+    text-align: center;
   }
 /************************** ordinateur portable L max 1439px ************************/
 @media (max-width:1439px){
