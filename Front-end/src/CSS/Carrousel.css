@@ -67,15 +67,14 @@
   border-radius: 35px;
   padding: 20px;
   max-width: 1300px;
-  /* max-height: 700px; */
-  margin-top: 20%;
+  max-height: 900px;
   width: 100%;
   height: auto;
   outline: none;
   display: flex;
   flex-direction: column;
   align-items: center;
-  overflow: auto;
+  overflow:auto;
 }
 .modal h2 {
   margin-top: 0;
