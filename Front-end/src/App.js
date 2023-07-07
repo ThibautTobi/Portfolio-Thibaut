@@ -16,7 +16,7 @@ function App() {
     <div>
         <Header />
         <Routes>
-          <Route exact path="/" element={<Home />}/>
+          <Route exact path="/Portfolio-Thibaut/" element={<Home />}/>
           <Route path="*" element={<Erreur />}/>
         </Routes>
         <Footer />
