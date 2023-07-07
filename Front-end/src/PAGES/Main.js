@@ -8,6 +8,7 @@ import Collapses from '../COMPONENTS/Collapse';
 import Carousel from '../COMPONENTS/Carrousel';
 import { SlideLeft } from "../COMPONENTS/Effets";
 import enveloppe from "../IMAGES/icone_envelope.svg";
+import matUI from '../IMAGES/icone_material_ui.svg';
 
 function Home (){
 
@@ -84,6 +85,10 @@ function Home (){
                                 <p>CSS</p>
                             </li>
                             <li>
+                                <FontAwesomeIcon icon="fa-brands fa-sass" style={{color: "#ffffff",}} className="icone"/>
+                                <p>Sass</p>
+                            </li>
+                            <li>
                                 <FontAwesomeIcon icon="fa-brands fa-square-js" style={{color: "#ffffff",}} className="icone"/>
                                 <p>JavaScript</p>
                             </li>
@@ -122,6 +127,14 @@ function Home (){
                             <li>
                                 <FontAwesomeIcon icon="fa-brands fa-trello" style={{color: "#fcfcfc",}} className="icone" />
                                 <p>Trello</p>
+                            </li>
+                            <li>
+                                <FontAwesomeIcon icon="fa-brands fa-square-font-awesome-stroke" style={{color: "#fcfcfc",}} className="icone" />
+                                <p>fontawesome</p>
+                            </li>
+                            <li>
+                                <img src={matUI} alt="materiel ui" style={{color: "#fcfcfc",}} className="icone" ></img>
+                                <p>Materiel UI</p>
                             </li>
                         </ul>
                     </div>

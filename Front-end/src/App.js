@@ -6,9 +6,9 @@ import Home from './PAGES/Main';
 import Erreur from './PAGES/Erreur';
 import './CSS/App.css';
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faHtml5,faGithub,faLinkedin,faFigma,faTrello,faNodeJs,faReact,faSquareJs,faCss3Alt } from '@fortawesome/free-brands-svg-icons';
+import { faHtml5,faGithub,faLinkedin,faFigma,faTrello,faNodeJs,faReact,faSquareJs,faCss3Alt,faSass,faSquareFontAwesomeStroke } from '@fortawesome/free-brands-svg-icons';
 
-library.add(faHtml5,faCss3Alt,faSquareJs,faReact,faNodeJs,faFigma,faTrello,faGithub,faLinkedin )
+library.add(faHtml5,faCss3Alt,faSquareJs,faReact,faNodeJs,faFigma,faTrello,faGithub,faLinkedin,faSass,faSquareFontAwesomeStroke )
 
 function App() {
 
@@ -16,7 +16,7 @@ function App() {
     <div>
         <Header />
         <Routes>
-          <Route exact path="/Portfolio-Thibaut/" element={<Home />}/>
+          <Route exact path="/" element={<Home />}/>
           <Route path="*" element={<Erreur />}/>
         </Routes>
         <Footer />
