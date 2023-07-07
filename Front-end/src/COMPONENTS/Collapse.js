@@ -8,8 +8,11 @@ function MultipleCollapses() {
       title: 'Mes Compétences en Front-End',
       content:[
         '- intégration web avec html et css.',
+        '- intégration web avec Sass.',
         '- intégrer du contenu conformément à une maquette.',
         '- implémenter une interface responsive.',
+        '- utilisation de Fontawesome.',
+        '- utilisation de Materiel UI.',
         '- suivre le déroulement du projet grâce à un outil de gestion de projet (trello).',
         '- rédiger les spécifications techniques d\'un projet web à partir des besoins fonctionnels.',
         '- découper une fonctionnalité en tâches pour préparer le développement.',

@@ -28,6 +28,7 @@ const data = [
         `- installer un environnement de développement front-end.`,
         `- intégration web avec html et css.`,
         `- intégrer du contenu conformément à une maquette.`,
+        `- utilisation de Fontawesome.`,
         `- implémenter une interface responsive.`,
         `- versionner son projet avec git et github.`,
         `- installer un environnement de développement front-end.`
@@ -127,6 +128,53 @@ const data = [
         `- utilisation d'une base de donnée`
     ]
     },
+    {
+    id : 7,
+    name : 'portfolio',
+    projet : 'Projet : OpenClassrooms',
+    image : 'vous étes sur la page',
+    imageMobile: 'vous étes sur la page',
+    lien : 'https://github.com/ThibautTobi/Portfolio-Thibaut.git',
+    langage : ['HTML','CSS','React','Node Js', 'Express','mongoose','Mongo DB'] ,
+    description : `Développez Mon propre PortFolio.`,
+    problematique : `trouver un bon design`,
+    competence :[
+        `- création d'une page web React.`,
+        `- mise en forme et style avec le css.`,
+        `- utilisation de Fontawesome.`,
+        `- utilisation de Materiel UI.`,
+        `- versionner son projet avec git et github.`,
+        `- installer un environnement de développement back-end.`,
+        `- implémenter un modèle logique de données conformément à la réglementation.`,
+        `- mettre en oeuvre des opérations CRUD de manière sécurisée.`,
+        `- stocker des données de manière sécurisée.`,
+        `- utilisation d'une base de donnée`
+    ]
+    }
+    //,
+    // {
+    //     id : 8,
+    //     name : 'Site E-commerce (En Cour)',
+    //     projet : 'Projet : Personnel',
+    //     image : 'en cour',
+    //     imageMobile: 'en cour',
+    //     lien : 'https://github.com/ThibautTobi/e_commerce.git',
+    //     langage : ['HTML','Sass','React','Node Js', 'Express','mongoose','Mongo DB'] ,
+    //     description : `Développez un site E-commerce complet.`,
+    //     problematique : `trouver un bon design et toutes les fonctionnaliter`,
+    //     competence :[
+    //         `- création d'une page web React.`,
+    //         `- mise en forme et style avec le Sass.`,
+    //         `- utilisation de Fontawesome.`,
+    //         `- utilisation de Materiel UI.`,
+    //         `- versionner son projet avec git et github.`,
+    //         `- installer un environnement de développement back-end.`,
+    //         `- implémenter un modèle logique de données conformément à la réglementation.`,
+    //         `- mettre en oeuvre des opérations CRUD de manière sécurisée.`,
+    //         `- stocker des données de manière sécurisée.`,
+    //         `- utilisation d'une base de donnée`
+    //     ]
+    //     }
 ];
 
 export default data;
