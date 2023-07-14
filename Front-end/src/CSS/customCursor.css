@@ -1,0 +1,81 @@
+.custom-cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events:none;
+    z-index: 99999;
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    border: 2px dashed #ffffff;
+    border-radius: 50%;
+    animation: anim1 5s infinite alternate;
+  }
+  .cursor-inner {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    background-color: #ffffff;
+    transform: translate(-50%, -50%);
+  }
+  /* grossi le pointer*/
+    /* animation: anim2 2s; */
+  @keyframes anim1{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+  }
+  /* @keyframes anim2{
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(2);
+    }
+    100%{
+        transform: scale(1);
+    }
+  } */
+  @media (max-width:1440px){
+    .custom-cursor {
+
+        width: 30px;
+        height: 30px;
+
+  }
+  .cursor-inner {
+    width: 15px;
+    height: 15px;
+}
+  }
+  @media (max-width:768px){
+    .custom-cursor {
+
+        width: 20px;
+        height: 20px;
+
+  }
+  .cursor-inner {
+    width: 10px;
+    height: 10px;
+}
+  }
+  @media (max-width:425px){
+    .custom-cursor {
+
+        width: 15px;
+        height: 15px;
+
+  }
+  .cursor-inner {
+    width: 5px;
+    height: 5px;
+}
+  }

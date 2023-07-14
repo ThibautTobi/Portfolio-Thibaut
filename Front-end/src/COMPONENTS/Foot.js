@@ -1,11 +1,11 @@
 import '../CSS/Footer.css' ;
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import sun from "../IMAGES/icone_light.svg";
-import night from "../IMAGES/icone_nightlight.svg";
-import useThemeClass from '../COMPONENTS/Theme';
+// import sun from "../IMAGES/icone_light.svg";
+// import night from "../IMAGES/icone_nightlight.svg";
+// import useThemeClass from '../COMPONENTS/Theme';
 
 function Footer (){
-    const { theme, toggleTheme } = useThemeClass();
+    //const { theme, toggleTheme } = useThemeClass();
     
     return (
             <footer>
@@ -27,9 +27,9 @@ function Footer (){
                             </ul>
                         </a>
                     </div>
-                    <button className='mode_button' onClick={toggleTheme}>
+                    {/* <button className='mode_button' onClick={toggleTheme}>
                         <img className='mode_button_img' src={theme === 'dark-theme' ? sun : night } alt='mode_theme'></img>
-                    </button>
+                    </button> */}
                     <p className='footer_p'>© 2023 Denis Thibaut.</p>
                 </div>
             </footer>
