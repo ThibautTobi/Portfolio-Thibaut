@@ -40,8 +40,20 @@ function Home (){
     return (
         <section id='present'>
             <article className="present_article">
-                <div className='display_h1'>
-                    <h1 className="present_h1">Denis Thibaut Développeur Web Full Stack</h1>
+            <h1>Denis Thibaut</h1>
+                <div className='display_present'>
+                    <div className="wrapper">
+                        <svg>
+                            <text x="50%" y="50%" dy=".35em">
+                            Développeur Web
+                            </text>
+                        </svg>
+                        <svg>
+                        <text x="50%" y="50%" dy=".35em">
+                             Full Stack
+                            </text>
+                        </svg>
+                    </div>
                 </div>
                 <Banner/>
                 <p className="present_p">
