@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Portfolio-Thibaut/static/css/main.939d05ea.css",
-    "main.js": "/Portfolio-Thibaut/static/js/main.502ae896.js",
+    "main.css": "/Portfolio-Thibaut/static/css/main.da8aebdb.css",
+    "main.js": "/Portfolio-Thibaut/static/js/main.8d9c8243.js",
     "static/media/banniere.webp": "/Portfolio-Thibaut/static/media/banniere.cdea4051662c2cc350e8.webp",
     "static/media/Kasa.webp": "/Portfolio-Thibaut/static/media/Kasa.3c2e029677c94f26c045.webp",
     "static/media/Sophie_Bluel.webp": "/Portfolio-Thibaut/static/media/Sophie_Bluel.7cebeb19adaadfc8e571.webp",
@@ -18,16 +18,14 @@
     "static/media/icone_mongodb.svg": "/Portfolio-Thibaut/static/media/icone_mongodb.7122712ba60f20d6060d37d665a30fb1.svg",
     "static/media/mini_Grimoire.webp": "/Portfolio-Thibaut/static/media/mini_Grimoire.08459096f823cefdd11a.webp",
     "static/media/icone_erreur.svg": "/Portfolio-Thibaut/static/media/icone_erreur.c50284536b19295bb8d3d3f478f561e2.svg",
-    "static/media/icone_light.svg": "/Portfolio-Thibaut/static/media/icone_light.e42a9d0ecd6a219d3f2973b03c69412a.svg",
     "index.html": "/Portfolio-Thibaut/index.html",
     "static/media/icone_material_ui.svg": "/Portfolio-Thibaut/static/media/icone_material_ui.1c44e89f5456b34a7e58ccbf9419000b.svg",
-    "static/media/icone_nightlight.svg": "/Portfolio-Thibaut/static/media/icone_nightlight.4ee5de0492a76389eca1bf7d09515108.svg",
     "static/media/icone_envelope.svg": "/Portfolio-Thibaut/static/media/icone_envelope.6cf107e63991954524627284cbf22513.svg",
-    "main.939d05ea.css.map": "/Portfolio-Thibaut/static/css/main.939d05ea.css.map",
-    "main.502ae896.js.map": "/Portfolio-Thibaut/static/js/main.502ae896.js.map"
+    "main.da8aebdb.css.map": "/Portfolio-Thibaut/static/css/main.da8aebdb.css.map",
+    "main.8d9c8243.js.map": "/Portfolio-Thibaut/static/js/main.8d9c8243.js.map"
   },
   "entrypoints": [
-    "static/css/main.939d05ea.css",
-    "static/js/main.502ae896.js"
+    "static/css/main.da8aebdb.css",
+    "static/js/main.8d9c8243.js"
   ]
 }
