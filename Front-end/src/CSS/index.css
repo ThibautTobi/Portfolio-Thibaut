@@ -6,6 +6,45 @@
   color: #242424;
   cursor: none;
 }
+/* Styles pour la barre de défilement globale */
+/* WebKit (Safari, Chrome, etc.) */
+::-webkit-scrollbar {
+  width: 20px; /* Largeur de la barre de défilement */
+}
+::-webkit-scrollbar-track {
+  background: transparent; /* Couleur de fond du track */
+}
+::-webkit-scrollbar-thumb {
+  background: white; /* Couleur de la barre de défilement */
+  border-radius: 15px; /* Arrondi des angles */
+}
+::-webkit-scrollbar-thumb:hover {
+  background: transparent; /* Couleur de la barre de défilement au survol */
+}
+
+/* Firefox */
+html {
+  scrollbar-width: thin; /* Largeur de la barre de défilement */
+  scrollbar-color: white transparent; /* Couleur de la barre de défilement et fond transparent */
+}
+
+/* Edge et IE (10+) */
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  ::-webkit-scrollbar {
+    width: 20px; /* Largeur de la barre de défilement */
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent; /* Couleur de fond du track */
+  }
+  ::-webkit-scrollbar-thumb {
+    background: white; /* Couleur de la barre de défilement */
+    border-radius: 15px; /* Arrondi des angles */
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: transparent; /* Couleur de la barre de défilement au survol */
+  }
+}
+
 /* .light-theme {
   background-color: white;
   color: white;
