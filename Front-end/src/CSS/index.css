@@ -54,6 +54,13 @@ html {
   color:#242424;
 } */
 
+/* Masquer le curseur sur les appareils tactiles (mobiles et tablettes) */
+@media (hover: none) {
+  html {
+    cursor: none;
+  }
+}
+
 html,body,#root {
   width: 100%;
   height: 100%;
